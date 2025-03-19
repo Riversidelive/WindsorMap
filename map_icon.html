@@ -28,7 +28,10 @@
         document.addEventListener("DOMContentLoaded", function() {
             var icon = document.getElementById("mapIcon");
             icon.addEventListener("mouseup", function(event) {
-                window.location.href = "https://www.google.com/maps/place/Detroit+River,+Windsor,+ON";
+                var win = window.open("https://www.google.com/maps/place/Detroit+River,+Windsor,+ON", "_blank");
+                if (!win || win.closed || typeof win.closed == "undefined") {
+                    alert("Popup blocked! Please allow pop-ups in OBS.");
+                }
             });
         });
     </script>
