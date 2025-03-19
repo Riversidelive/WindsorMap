@@ -22,9 +22,15 @@
     </style>
 </head>
 <body>
-    <a id="mapLink" href="https://www.google.com/maps/place/Detroit+River,+Windsor,+ON" target="_blank">
-        <div id="mapIcon"></div>
-    </a>
+    <div id="mapIcon"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var icon = document.getElementById("mapIcon");
+            icon.addEventListener("mouseup", function(event) {
+                window.location.href = "https://www.google.com/maps/place/Detroit+River,+Windsor,+ON";
+            });
+        });
+    </script>
 </body>
 </html>
-
