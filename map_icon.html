@@ -22,18 +22,6 @@
     </style>
 </head>
 <body>
-    <div id="mapIcon"></div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var icon = document.getElementById("mapIcon");
-            icon.addEventListener("mouseup", function(event) {
-                var win = window.open("https://www.google.com/maps/place/Detroit+River,+Windsor,+ON", "_blank");
-                if (!win || win.closed || typeof win.closed == "undefined") {
-                    alert("Popup blocked! Please allow pop-ups in OBS.");
-                }
-            });
-        });
-    </script>
+    <a id="mapIcon" href="https://www.google.com/maps/place/Detroit+River,+Windsor,+ON" target="_blank"></a>
 </body>
 </html>
